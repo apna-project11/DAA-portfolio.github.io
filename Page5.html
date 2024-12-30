@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Query Algorithms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            background-color: #800080; /* Purple color */
+            padding: 20px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #800080; /* Purple color */
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #800080;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 16px;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #800080;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Array Query Algorithms</h1>
+
+    <div class="section">
+        <h2>Need for Array Query Algorithms</h2>
+        <p><strong>Efficient handling of large datasets with frequent queries.</strong></p>
+        <p><strong>Real-time responses for operations like range sum, min/max, etc.</strong></p>
+        <p><strong>Avoids recalculations, ensuring optimized performance.</strong></p>
+        <p><strong>Critical for scenarios with frequent updates and dynamic datasets.</strong></p>
+    </div>
+
+    <div class="section">
+        <h2>Implications</h2>
+        <ul>
+            <li><strong>Efficiency:</strong> Queries and updates in O(log n) or O(1) for optimized algorithms.</li>
+            <li><strong>Memory Trade-offs:</strong> Uses additional memory for precomputation (e.g., Segment Tree, Sparse Table).</li>
+            <li><strong>Scalability:</strong> Handles large-scale data efficiently.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Key Algorithms</h2>
+        <ul>
+            <li><strong>Sparse Table:</strong> Query: O(1), Static arrays, idempotent operations (min, max).</li>
+            <li><strong>Segment Tree:</strong> Query/Update: O(log n), Dynamic data with range operations.</li>
+            <li><strong>Fenwick Tree (BIT):</strong> Query/Update: O(log n), Efficient prefix sums and point updates.</li>
+            <li><strong>Range Minimum Query (RMQ):</strong> Precomputed solutions for quick range min queries.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Applications</h2>
+        <ul>
+            <li><strong>Competitive Programming:</strong> Range sums, min/max, GCD.</li>
+            <li><strong>Databases:</strong> Frequency tables, transaction logs.</li>
+            <li><strong>Financial Analysis:</strong> Interval-based computations.</li>
+            <li><strong>Gaming:</strong> Scoring systems, state updates.</li>
+            <li><strong>Scientific Computing:</strong> Aggregate operations for simulations.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Principles</h2>
+        <ul>
+            <li><strong>Divide and Conquer:</strong> Used in Segment Trees and Fenwick Trees.</li>
+            <li><strong>Precomputation:</strong> Sparse Table leverages precomputed values.</li>
+            <li><strong>Tree-Based Structures:</strong> Efficient representation for dynamic updates.</li>
+            <li><strong>Idempotent Operations:</strong> Exploited in RMQ and Sparse Table.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Comparison</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Query Time</th>
+                    <th>Update Time</th>
+                    <th>Best Use Case</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sparse Table</td>
+                    <td>O(1)</td>
+                    <td>N/A</td>
+                    <td>Static range queries (no updates)</td>
+                </tr>
+                <tr>
+                    <td>Segment Tree</td>
+                    <td>O(log n)</td>
+                    <td>O(log n)</td>
+                    <td>Dynamic range queries and updates</td>
+                </tr>
+                <tr>
+                    <td>Fenwick Tree</td>
+                    <td>O(log n)</td>
+                    <td>O(log n)</td>
+                    <td>Prefix sums and point updates</td>
+                </tr>
+                <tr>
+                    <td>Range Minimum Query</td>
+                    <td>O(1)</td>
+                    <td>N/A</td>
+                    <td>Fixed arrays for minima/maxima</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>For more information on Array Query Algorithms, visit <a href="#">this page</a>.</p>
+    </footer>
+
+</body>
+</html>

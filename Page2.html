@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efficiency in Algorithms</title>
+    <style>
+        /* Basic body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 20px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            font-size: 16px;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Efficiency in Algorithms</h1>
+
+    <section>
+        <h2>Space Efficiency</h2>
+        <p>Space Efficiency is about how much memory or storage an algorithm uses while running. It’s like how many bowls or tools you need to bake that cake. The fewer, the better.</p>
+    </section>
+
+    <section>
+        <h2>Time Efficiency</h2>
+        <p>Time Efficiency is about how fast an algorithm runs. Imagine you’re baking a cake, time efficiency is how quickly you can finish baking.</p>
+    </section>
+
+    <section>
+        <h2>Orders of Growth</h2>
+        <p>Below are examples of how different algorithms demonstrate various orders of growth:</p>
+        <ul>
+            <li>Compound Interest: Keeps adding interest over time to the principal.</li>
+            <li>Traffic Lights: Switches between red, yellow, and green in a loop to control vehicle flow.</li>
+            <li>Daily Step Counting: A fitness tracker counts each step throughout the day.</li>
+            <li>Laundry Sorting: Repeatedly picking up and categorizing clothes by type or color.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Class of Problems and Orders of Growth</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Class of Problem</th>
+                    <th>Order of Growth</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Constant Time</td>
+                    <td>O(1)</td>
+                    <td>Execution time does not depend on input size.</td>
+                    <td>Accessing an element in an array.</td>
+                </tr>
+                <tr>
+                    <td>Logarithmic Time</td>
+                    <td>O(log n)</td>
+                    <td>Time increases logarithmically with input size; problem size halves in each step.</td>
+                    <td>Binary search on a sorted array.</td>
+                </tr>
+                <tr>
+                    <td>Linear Time</td>
+                    <td>O(n)</td>
+                    <td>Time grows linearly with input size.</td>
+                    <td>Traversing a list.</td>
+                </tr>
+                <tr>
+                    <td>Linearithmic Time</td>
+                    <td>O(n log n)</td>
+                    <td>Combines linear and logarithmic growth; often seen in divide-and-conquer algorithms.</td>
+                    <td>Merge sort, Quick sort.</td>
+                </tr>
+                <tr>
+                    <td>Quadratic Time</td>
+                    <td>O(n²)</td>
+                    <td>Time grows quadratically with input size; often due to nested loops.</td>
+                    <td>Bubble sort, Matrix addition.</td>
+                </tr>
+                <tr>
+                    <td>Cubic Time</td>
+                    <td>O(n³)</td>
+                    <td>Time grows cubically with input size; common in algorithms with three nested loops.</td>
+                    <td>Matrix multiplication.</td>
+                </tr>
+                <tr>
+                    <td>Exponential Time</td>
+                    <td>O(2ⁿ)</td>
+                    <td>Time doubles with each additional input; impractical for large inputs.</td>
+                    <td>Solving the Tower of Hanoi, brute force combinatorial problems.</td>
+                </tr>
+                <tr>
+                    <td>Factorial Time</td>
+                    <td>O(n!)</td>
+                    <td>Time grows factorially; extremely high growth rate, often infeasible for large inputs.</td>
+                    <td>Generating all permutations of a set.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>For more information on algorithm efficiency, visit <a href="#">this page</a>.</p>
+    </footer>
+
+</body>
+</html>

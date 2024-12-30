@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Data Structures</title>
+    <style>
+        /* Basic body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            background-color: #800080; /* Purple color */
+            padding: 20px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #800080; /* Purple color */
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* List styling */
+        ul {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            font-size: 16px;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #800080; /* Purple color */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tree Data Structures</h1>
+
+    <div class="section">
+        <h2>Tree (General)</h2>
+        <p><strong>Concept:</strong> A hierarchical structure with nodes connected by edges.</p>
+        <p><strong>Advantages:</strong> Simple representation of parent-child relationships.</p>
+        <p><strong>Problem Solved:</strong> General-purpose hierarchical data modeling, e.g., file systems, organizational charts.</p>
+        <p><strong>Limitations:</strong> Lacks balance; inefficient for operations like search or insert in unstructured data.</p>
+    </div>
+
+    <div class="section">
+        <h2>Binary Search Tree (BST)</h2>
+        <p><strong>Concept:</strong> A binary tree where the left child contains smaller values and the right child contains larger values than the parent.</p>
+        <p><strong>Advantages:</strong> Enables efficient search, insertion, and deletion (O(h), where h is the height).</p>
+        <p><strong>Problem Solved:</strong> Ordered data storage, dynamic set operations.</p>
+        <p><strong>Limitations:</strong> Becomes skewed (degraded to linked list) if data is not evenly distributed, leading to O(n) time complexity for operations.</p>
+    </div>
+
+    <div class="section">
+        <h2>AVL Tree</h2>
+        <p><strong>Concept:</strong> A self-balancing binary search tree where the height difference between subtrees is at most 1.</p>
+        <p><strong>Advantages:</strong> Guaranteed O(log n) time complexity for search, insertion, and deletion.</p>
+        <p><strong>Problem Solved:</strong> Overcomes imbalance issues in BSTs, ideal for applications requiring balanced datasets.</p>
+        <p><strong>Limitations:</strong> Higher overhead for maintaining balance through rotations during insertion and deletion.</p>
+    </div>
+
+    <div class="section">
+        <h2>2-3 Tree</h2>
+        <p><strong>Concept:</strong> A balanced search tree where nodes can have 2 or 3 children.</p>
+        <p><strong>Advantages:</strong> Ensures balance, supports efficient search, insertion, and deletion in O(log n).</p>
+        <p><strong>Problem Solved:</strong> Dynamically adjusting tree size for ordered data storage without skew.</p>
+        <p><strong>Limitations:</strong> More complex to implement compared to BST or AVL tree.</p>
+    </div>
+
+    <div class="section">
+        <h2>Red-Black Tree</h2>
+        <p><strong>Concept:</strong> A self-balancing BST where nodes have an additional color attribute (red or black) with rules to ensure balance.</p>
+        <p><strong>Advantages:</strong> Balances the tree with fewer rotations than AVL trees; efficient for search, insert, and delete (O(log n)).</p>
+        <p><strong>Problem Solved:</strong> Dynamic datasets in systems like databases, associative arrays, and memory allocators.</p>
+        <p><strong>Limitations:</strong> More rotations than 2-3 trees in some cases; complex balancing rules.</p>
+    </div>
+
+    <div class="section">
+        <h2>Heap</h2>
+        <p><strong>Concept:</strong> A binary tree-based structure satisfying the heap property:</p>
+        <ul>
+            <li><strong>Max-Heap:</strong> Parent node is greater than or equal to its children.</li>
+            <li><strong>Min-Heap:</strong> Parent node is less than or equal to its children.</li>
+        </ul>
+        <p><strong>Advantages:</strong> Efficient O(log n) insertion and deletion of max/min elements.</p>
+        <p><strong>Problem Solved:</strong> Priority queue implementations, scheduling problems.</p>
+        <p><strong>Limitations:</strong> Inefficient for general search operations (O(n)).</p>
+    </div>
+
+    <div class="section">
+        <h2>Trie</h2>
+        <p><strong>Concept:</strong> A tree used for storing strings where nodes represent prefixes.</p>
+        <p><strong>Advantages:</strong> Fast search, insertion, and deletion (O(m), where m is the key length). Reduces storage for common prefixes.</p>
+        <p><strong>Problem Solved:</strong> Word dictionaries, autocomplete systems, IP routing.</p>
+        <p><strong>Limitations:</strong> Requires significant memory for sparse datasets.</p>
+    </div>
+
+    <footer>
+        <p>For more information on tree data structures, visit <a href="#">this page</a>.</p>
+    </footer>
+
+</body>
+</html>

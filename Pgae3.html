@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Techniques</title>
+    <style>
+        /* Basic body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* List styling */
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            font-size: 16px;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Algorithm Techniques</h1>
+
+    <div class="section">
+        <h2>Pruning Techniques</h2>
+        <p><strong>Concept:</strong> Eliminate unnecessary computations to improve efficiency.</p>
+        <p><strong>Application:</strong> Used in Branch and Bound algorithms to cut off branches of the search tree that won't yield better results.</p>
+        <p><strong>Example:</strong> Solving the Knapsack Problem by discarding infeasible solutions early.</p>
+        <p><strong>Real-world Use:</strong> Reducing search space in AI applications like chess or pathfinding.</p>
+    </div>
+
+    <div class="section">
+        <h2>Edge Relaxation</h2>
+        <p><strong>Concept:</strong> Gradually refine the estimates of the shortest paths in weighted graphs.</p>
+        <p><strong>Application:</strong> Core principle in Dijkstra’s Algorithm and Bellman-Ford Algorithm.</p>
+        <p><strong>Example:</strong> Iteratively updates the shortest distance from the source to all other vertices.</p>
+        <p><strong>Real-world Use:</strong> Optimizing routes in GPS navigation systems.</p>
+    </div>
+
+    <div class="section">
+        <h2>Sets and Union-Find (Disjoint Set Union)</h2>
+        <p><strong>Concept:</strong> Efficiently handle dynamic connectivity queries in a set.</p>
+        <p><strong>Operations:</strong> Union to combine sets, and Find to check membership or determine the representative.</p>
+        <p><strong>Application:</strong> Kruskal’s Algorithm for Minimum Spanning Tree.</p>
+        <p><strong>Real-world Use:</strong> Network connectivity and clustering.</p>
+    </div>
+
+    <div class="section">
+        <h2>Traversal Techniques</h2>
+        <p><strong>Concept:</strong> Systematically explore all vertices and edges in a graph.</p>
+        <p><strong>Applications:</strong></p>
+        <ul>
+            <li><strong>Breadth-First Search (BFS):</strong> Shortest path in unweighted graphs.</li>
+            <li><strong>Depth-First Search (DFS):</strong> Detecting cycles, topological sorting, and solving mazes.</li>
+        </ul>
+        <p><strong>Real-world Use:</strong> Web crawling, social network analysis.</p>
+    </div>
+
+    <div class="section">
+        <h2>Hashing</h2>
+        <p><strong>Concept:</strong> Maps data to a fixed-size table for efficient lookups.</p>
+        <p><strong>Principle:</strong> Minimizes collisions using methods like open addressing or chaining.</p>
+        <p><strong>Example:</strong> Hash function: h(k) = k mod m.</p>
+        <p><strong>Real-world Use:</strong> Database indexing, caching, and password verification.</p>
+    </div>
+
+    <div class="section">
+        <h2>Prefix and Suffix</h2>
+        <p><strong>Concept:</strong> Use of prefix sums or suffix sums to preprocess data for rapid queries.</p>
+        <p><strong>Application:</strong> Efficiently compute subarray sums, ranges, or solve pattern matching problems.</p>
+        <p><strong>Example:</strong> Longest Common Prefix (LCP) in string matching.</p>
+        <p><strong>Real-world Use:</strong> Data compression, DNA sequencing.</p>
+    </div>
+
+    <footer>
+        <p>For more information on algorithm techniques, visit <a href="#">this page</a>.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree and Graph Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            background-color: #800080; /* Purple color */
+            padding: 20px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #800080; /* Purple color */
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 16px;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #800080;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #800080;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tree and Graph Concepts</h1>
+
+    <!-- Tree Section -->
+    <div class="section">
+        <h2>Tree</h2>
+        <p><strong>Definition:</strong> A hierarchical structure with one root and nodes connected in a parent-child relationship.</p>
+        
+        <h3>Characteristics:</h3>
+        <ul>
+            <li>Acyclic (no cycles)</li>
+            <li>Connected (all nodes are reachable)</li>
+            <li>Directed (parent-child direction)</li>
+        </ul>
+    </div>
+
+    <!-- Tree Traversals Section -->
+    <div class="section">
+        <h2>Tree Traversals</h2>
+        <ul>
+            <li><strong>Pre-order:</strong> Visit root, then left and right subtrees</li>
+            <li><strong>In-order:</strong> Visit left, root, then right subtrees</li>
+            <li><strong>Post-order:</strong> Visit left, right, then root</li>
+            <li><strong>Level-order (BFS):</strong> Visit nodes level by level</li>
+        </ul>
+    </div>
+
+    <!-- Graph Section -->
+    <div class="section">
+        <h2>Graph</h2>
+        <p><strong>Definition:</strong> A collection of nodes (vertices) connected by edges.</p>
+
+        <h3>Characteristics:</h3>
+        <ul>
+            <li>Can be cyclic (can have cycles)</li>
+            <li>Can be disconnected (some nodes may not be reachable)</li>
+            <li>Directed or Undirected (edges can have direction or not)</li>
+        </ul>
+    </div>
+
+    
+
+    <!-- Graph Traversals Section -->
+    <div class="section">
+        <h2>Graph Traversals</h2>
+        <ul>
+            <li><strong>DFS:</strong> Explore as far as possible along each branch</li>
+            <li><strong>BFS:</strong> Explore all neighbors at the current depth first</li>
+        </ul>
+    </div>
+
+    <!-- Applications Section -->
+    <div class="section">
+        <h2>Applications</h2>
+        
+        <h3>Tree Applications</h3>
+        <ul>
+            <li>File systems</li>
+            <li>Expression trees</li>
+            <li>Database indexing</li>
+            <li>Decision trees in Machine Learning</li>
+        </ul>
+
+        <h3>Graph Applications</h3>
+        <ul>
+            <li>Social networks</li>
+            <li>Routing (shortest path)</li>
+            <li>Web crawling</li>
+            <li>Recommendation systems</li>
+        </ul>
+    </div>
+
+    <!-- Comparison Table Section -->
+    <div class="section">
+        <h2>Comparison: Tree vs. Graph</h2>
+        <table>
+            <tr>
+                <th>Aspect</th>
+                <th>Tree</th>
+                <th>Graph</th>
+            </tr>
+            <tr>
+                <td>Structure</td>
+                <td>A connected acyclic graph with N−1 edges and N nodes.</td>
+                <td>A collection of nodes (vertices) connected by edges.</td>
+            </tr>
+            <tr>
+                <td>Connectivity</td>
+                <td>Always connected.</td>
+                <td>Can be connected or disconnected.</td>
+            </tr>
+            <tr>
+                <td>Cycles</td>
+                <td>No cycles allowed.</td>
+                <td>Cycles may be present.</td>
+            </tr>
+            <tr>
+                <td>Hierarchy</td>
+                <td>Hierarchical structure with a root node.</td>
+                <td>No strict hierarchy; can be cyclic.</td>
+            </tr>
+            <tr>
+                <td>Edge Count</td>
+                <td>N−1 for N nodes.</td>
+                <td>Can have any number of edges.</td>
+            </tr>
+            <tr>
+                <td>Traversal</td>
+                <td>Limited to specific tree-based methods like Preorder, Inorder, Postorder.</td>
+                <td>Includes Depth-First Search (DFS) and Breadth-First Search (BFS).</td>
+            </tr>
+            <tr>
+                <td>Representation</td>
+                <td>Typically stored using parent-child relationships.</td>
+                <td>Represented using adjacency matrix or adjacency list.</td>
+            </tr>
+            <tr>
+                <td>Applications</td>
+                <td>Used where hierarchical relationships are required.</td>
+                <td>Used to model networks and relationships.</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>Learn more about Trees and Graphs in Data Structures and Algorithms.</p>
+    </footer>
+
+</body>
+</html>

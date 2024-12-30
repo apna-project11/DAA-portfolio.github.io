@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting & Searching Algorithms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            background-color: #0044cc; /* Updated Blue color */
+            padding: 20px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #0044cc; /* Updated Blue color */
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #0044cc; /* Updated Blue color */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 16px;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #0044cc; /* Updated Blue color */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0044cc; /* Updated Blue color */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sorting & Searching Algorithms</h1>
+
+    <!-- Sorting Algorithms Section -->
+    <div class="section">
+        <h2>Sorting Algorithms</h2>
+
+        <h3>Bubble Sort</h3>
+        <p><strong>Description:</strong> Swaps adjacent elements until sorted.</p>
+        <p><strong>Complexity:</strong> O(n²)</p>
+        <p><strong>Use:</strong> Small datasets</p>
+
+        <h3>Insertion Sort</h3>
+        <p><strong>Description:</strong> Builds the sorted list one element at a time.</p>
+        <p><strong>Complexity:</strong> O(n²)</p>
+        <p><strong>Use:</strong> Nearly sorted datasets</p>
+
+        <h3>Merge Sort</h3>
+        <p><strong>Description:</strong> Divides and merges sublists.</p>
+        <p><strong>Complexity:</strong> O(n log n)</p>
+        <p><strong>Use:</strong> Large-scale data</p>
+
+        <h3>Quick Sort</h3>
+        <p><strong>Description:</strong> Partitions around a pivot and sorts.</p>
+        <p><strong>Complexity:</strong> O(n log n) (average)</p>
+        <p><strong>Use:</strong> General-purpose sorting</p>
+
+        <h3>Heap Sort</h3>
+        <p><strong>Description:</strong> Sorts by using a binary heap.</p>
+        <p><strong>Complexity:</strong> O(n log n)</p>
+        <p><strong>Use:</strong> Accessing max/min values</p>
+
+        <h3>Radix Sort</h3>
+        <p><strong>Description:</strong> Non-comparative, digit-based sorting.</p>
+        <p><strong>Complexity:</strong> O(nk), where k is the number of digits in the largest number</p>
+        <p><strong>Use:</strong> Sorting large numbers (e.g., ZIP codes, IDs)</p>
+
+        <!-- Sorting Algorithms Comparison Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Description</th>
+                    <th>Complexity</th>
+                    <th>Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bubble Sort</td>
+                    <td>Swaps adjacent elements until sorted.</td>
+                    <td>O(n²)</td>
+                    <td>Small datasets</td>
+                </tr>
+                <tr>
+                    <td>Insertion Sort</td>
+                    <td>Builds the sorted list one element at a time.</td>
+                    <td>O(n²)</td>
+                    <td>Nearly sorted datasets</td>
+                </tr>
+                <tr>
+                    <td>Merge Sort</td>
+                    <td>Divides and merges sublists.</td>
+                    <td>O(n log n)</td>
+                    <td>Large-scale data</td>
+                </tr>
+                <tr>
+                    <td>Quick Sort</td>
+                    <td>Partitions around a pivot and sorts.</td>
+                    <td>O(n log n) (average)</td>
+                    <td>General-purpose sorting</td>
+                </tr>
+                <tr>
+                    <td>Heap Sort</td>
+                    <td>Sorts by using a binary heap.</td>
+                    <td>O(n log n)</td>
+                    <td>Accessing max/min values</td>
+                </tr>
+                <tr>
+                    <td>Radix Sort</td>
+                    <td>Non-comparative, digit-based sorting.</td>
+                    <td>O(nk)</td>
+                    <td>Sorting large numbers (e.g., ZIP codes, IDs)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Searching Algorithms Section -->
+    <div class="section">
+        <h2>Searching Algorithms</h2>
+
+        <h3>Linear Search</h3>
+        <p><strong>Description:</strong> Checks each element.</p>
+        <p><strong>Complexity:</strong> O(n)</p>
+        <p><strong>Use:</strong> Small or unsorted datasets</p>
+
+        <h3>Binary Search</h3>
+        <p><strong>Description:</strong> Divides sorted list in half.</p>
+        <p><strong>Complexity:</strong> O(log n)</p>
+        <p><strong>Use:</strong> Sorted data</p>
+
+        <h3>Hashing</h3>
+        <p><strong>Description:</strong> Uses a hash function for fast lookups.</p>
+        <p><strong>Complexity:</strong> O(1) (avg)</p>
+        <p><strong>Use:</strong> Databases and caches</p>
+
+        <h3>DFS (Depth-First Search)</h3>
+        <p><strong>Description:</strong> Explores deeply along branches.</p>
+        <p><strong>Complexity:</strong> O(V + E)</p>
+        <p><strong>Use:</strong> AI, network routing</p>
+
+        <h3>BFS (Breadth-First Search)</h3>
+        <p><strong>Description:</strong> Explores all neighbors at current depth.</p>
+        <p><strong>Complexity:</strong> O(V + E)</p>
+        <p><strong>Use:</strong> Shortest path, GPS</p>
+
+        <!-- Searching Algorithms Comparison Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Description</th>
+                    <th>Complexity</th>
+                    <th>Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Linear Search</td>
+                    <td>Checks each element.</td>
+                    <td>O(n)</td>
+                    <td>Small or unsorted datasets</td>
+                </tr>
+                <tr>
+                    <td>Binary Search</td>
+                    <td>Divides sorted list in half.</td>
+                    <td>O(log n)</td>
+                    <td>Sorted data</td>
+                </tr>
+                <tr>
+                    <td>Hashing</td>
+                    <td>Uses a hash function for fast lookups.</td>
+                    <td>O(1) (avg)</td>
+                    <td>Databases and caches</td>
+                </tr>
+                <tr>
+                    <td>DFS (Depth-First Search)</td>
+                    <td>Explores deeply along branches.</td>
+                    <td>O(V + E)</td>
+                    <td>AI, network routing</td>
+                </tr>
+                <tr>
+                    <td>BFS (Breadth-First Search)</td>
+                    <td>Explores all neighbors at current depth.</td>
+                    <td>O(V + E)</td>
+                    <td>Shortest path, GPS</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Real-World Applications Section -->
+    <div class="section">
+        <h2>Real-World Applications</h2>
+        <ul>
+            <li><strong>Databases:</strong> Sorting and searching for efficient retrieval</li>
+            <li><strong>E-commerce:</strong> Sorting products, binary search for items</li>
+            <li><strong>Operating Systems:</strong> Sorting files and searching processes</li>
+            <li><strong>Web Search Engines:</strong> Sorting results, web page searches</li>
+            <li><strong>Navigation:</strong> BFS/Dijkstra for shortest path finding</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Algorithms Guide. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

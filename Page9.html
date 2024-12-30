@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Techniques</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            background-color: #0044cc;
+            padding: 20px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #0044cc;
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #0044cc;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 16px;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #0044cc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Algorithm Techniques</h1>
+
+    <!-- Divide and Conquer Section -->
+    <div class="section">
+        <h2>1. Divide and Conquer</h2>
+        <p><strong>Description:</strong> This technique involves dividing a problem into smaller subproblems, solving them independently, and combining their solutions to address the original problem.</p>
+        <p><strong>Steps:</strong></p>
+        <ul>
+            <li><strong>Divide:</strong> Split the problem into smaller subproblems.</li>
+            <li><strong>Conquer:</strong> Solve each subproblem recursively.</li>
+            <li><strong>Combine:</strong> Merge the solutions of the subproblems.</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Merge Sort</li>
+            <li>Quick Sort</li>
+            <li>Binary Search</li>
+        </ul>
+        <p><strong>Applications:</strong> Sorting algorithms, Numerical computations like Fast Fourier Transform (FFT).</p>
+    </div>
+
+    <!-- Dynamic Programming Section -->
+    <div class="section">
+        <h2>2. Dynamic Programming (DP)</h2>
+        <p><strong>Description:</strong> Dynamic programming solves problems by breaking them into overlapping subproblems and storing their results to avoid redundant computations.</p>
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+            <li>Utilizes a table to store intermediate results.</li>
+            <li>Requires optimal substructure and overlapping subproblems.</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Fibonacci Sequence</li>
+            <li>Knapsack Problem</li>
+            <li>Longest Common Subsequence (LCS)</li>
+        </ul>
+        <p><strong>Applications:</strong> Optimization problems in operations research, Bioinformatics (e.g., sequence alignment), Game theory.</p>
+    </div>
+
+    <!-- Greedy Algorithms Section -->
+    <div class="section">
+        <h2>3. Greedy Algorithms</h2>
+        <p><strong>Description:</strong> Greedy algorithms make a series of choices, each of which looks best at the moment, with the hope of finding the global optimum.</p>
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+            <li>Does not backtrack or reconsider earlier choices.</li>
+            <li>Works well for problems with the greedy-choice property and optimal substructure.</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Kruskal's and Prim's Algorithms</li>
+            <li>Huffman Encoding</li>
+            <li>Activity Selection Problem</li>
+        </ul>
+        <p><strong>Applications:</strong> Network design, Resource allocation, Scheduling problems.</p>
+    </div>
+
+    <!-- Backtracking Section -->
+    <div class="section">
+        <h2>4. Backtracking</h2>
+        <p><strong>Description:</strong> Backtracking systematically explores all possible solutions by building them incrementally and abandoning solutions that fail to satisfy constraints.</p>
+        <p><strong>Steps:</strong></p>
+        <ul>
+            <li><strong>Choose:</strong> Pick an option.</li>
+            <li><strong>Explore:</strong> Recur to see if the option leads to a solution.</li>
+            <li><strong>Unchoose:</strong> Backtrack if the choice does not work.</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>N-Queens Problem</li>
+            <li>Sudoku Solver</li>
+            <li>Subset Sum Problem</li>
+        </ul>
+        <p><strong>Applications:</strong> Constraint satisfaction problems, Combinatorial optimization, Puzzle solving.</p>
+    </div>
+
+    <!-- Branch and Bound Section -->
+    <div class="section">
+        <h2>5. Branch and Bound</h2>
+        <p><strong>Description:</strong> Branch and bound is a refinement of backtracking that uses bounds to prune portions of the search space that cannot yield optimal solutions.</p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Maintains a global bound to limit exploration.</li>
+            <li>Often used for optimization problems.</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Traveling Salesman Problem (TSP)</li>
+            <li>Integer Linear Programming</li>
+        </ul>
+        <p><strong>Applications:</strong> Combinatorial optimization, Integer programming, Network flow problems.</p>
+    </div>
+
+    <!-- Randomized Algorithms Section -->
+    <div class="section">
+        <h2>6. Randomized Algorithms</h2>
+        <p><strong>Description:</strong> Randomized algorithms use random numbers to influence their behavior and make decisions during execution.</p>
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+            <li>Can be Las Vegas (always correct, but runtime varies) or Monte Carlo (runtime is fixed, but correctness may vary).</li>
+            <li>Often simpler and faster than deterministic counterparts.</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Randomized Quick Sort</li>
+            <li>Monte Carlo Simulations</li>
+            <li>Probabilistic Primality Testing</li>
+        </ul>
+        <p><strong>Applications:</strong> Cryptography, Approximation algorithms, Large-scale simulations.</p>
+    </div>
+
+    <!-- Approximation Algorithms Section -->
+    <div class="section">
+        <h2>7. Approximation Algorithms</h2>
+        <p><strong>Description:</strong> Approximation algorithms find solutions close to the optimal one, particularly for problems where finding the exact solution is computationally infeasible.</p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Provides a guarantee on how close the solution is to the optimal.</li>
+            <li>Used for NP-hard problems.</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Traveling Salesman Problem (TSP)</li>
+            <li>Vertex Cover</li>
+        </ul>
+        <p><strong>Applications:</strong> Resource scheduling, Network optimization, Operations research.</p>
+    </div>
+
+    <!-- Brute Force Section -->
+    <div class="section">
+        <h2>8. Brute Force</h2>
+        <p><strong>Description:</strong> The brute force method involves exhaustively enumerating all possible solutions and selecting the best one.</p>
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+            <li>Simple and guarantees correctness but is computationally expensive.</li>
+            <li>Used as a baseline for evaluating other algorithms.</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Exhaustive search for finding all subsets of a set.</li>
+            <li>Generating permutations to solve the TSP.</li>
+        </ul>
+        <p><strong>Applications:</strong> Small-scale problems, Problems with no efficient solution.</p>
+    </div>
+
+    <!-- Recursive Algorithms Section -->
+    <div class="section">
+        <h2>9. Recursive Algorithms</h2>
+        <p><strong>Description:</strong> Recursive algorithms solve problems by calling themselves with modified input, often relying on base cases to terminate.</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Tower of Hanoi</li>
+            <li>Factorial Calculation</li>
+        </ul>
+        <p><strong>Applications:</strong> Problems with a natural recursive structure (e.g., tree traversal), Divide and conquer algorithms.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Algorithm Techniques Guide. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
