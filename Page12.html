@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Implementation - Smart City</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #004d40;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: left;
+            margin: 0 15%;
+        }
+        .subheading {
+            font-size: 28px;
+            color: #00796b;
+            font-weight: bold;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+        footer {
+            background-color: #004d40;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .code-box {
+            background-color: #e3f2f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #00796b;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 16px;
+        }
+        .result-box {
+            background-color: #f0f4f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #004d40;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Code Implementation</h1>
+</header>
+
+<section>
+    <h2 class="subheading">1. Secure Smart Home Solutions</h2>
+
+    <!-- C++ Code Box -->
+    <div class="code-box">
+        <code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;unordered_map&gt;
+#include &lt;queue&gt;
+#include &lt;climits&gt;
+#include &lt;string&gt;
+#include &lt;set&gt;
+
+void useArrays() {
+    std::string sensorNames[] = {"Living Room Sensor", "Front Door Camera", "Bedroom Sensor", "Garage Sensor"};
+    bool sensorStatus[] = {true, false, true, false};
+    int numSensors = sizeof(sensorNames) / sizeof(sensorNames[0]);
+
+    std::cout &lt;&lt; "Sensor Status:\n";
+    for (int i = 0; i &lt; numSensors; i++) {
+        std::cout &lt;&lt; sensorNames[i] &lt;&lt; ": " &lt;&lt; (sensorStatus[i] ? "ACTIVE" : "INACTIVE") &lt;&lt; std::endl;
+    }
+}
+
+class EventNode {
+public:
+    std::string event;
+    EventNode* next;
+    EventNode(std::string event) : event(event), next(nullptr) {}
+};
+
+void useLinkedList() {
+    EventNode* head = new EventNode("Motion detected in Living Room");
+    head-&gt;next = new EventNode("Door opened at Front Door");
+
+    EventNode* current = head;
+    std::cout &lt;&lt; "Security Events:\n";
+    while (current != nullptr) {
+        std::cout &lt;&lt; current-&gt;event &lt;&lt; std::endl;
+        current = current-&gt;next;
+    }
+}
+
+void useQueue() {
+    std::queue&lt;std::string&gt; securityQueue;
+    securityQueue.push("Living Room Camera Alert");
+    securityQueue.push("Front Door Camera Alert");
+
+    std::cout &lt;&lt; "Security Task Queue:\n";
+    while (!securityQueue.empty()) {
+        std::cout &lt;&lt; securityQueue.front() &lt;&lt; std::endl;
+        securityQueue.pop();
+    }
+}
+
+void useDijkstra() {
+    int V = 4;
+    int graph[4][4] = {
+        {0, 10, 0, 30},
+        {10, 0, 50, 0},
+        {0, 50, 0, 0},
+        {30, 0, 0, 0}
+    };
+
+    int dist[V];
+    bool visited[V];
+    std::fill(dist, dist + V, INT_MAX);
+    std::fill(visited, visited + V, false);
+
+    dist[0] = 0;
+    for (int count = 0; count &lt; V - 1; count++) {
+        int min = INT_MAX, u = -1;
+        for (int v = 0; v &lt; V; v++) {
+            if (!visited[v] && dist[v] &lt;= min) {
+                min = dist[v];
+                u = v;
+            }
+        }
+        visited[u] = true;
+
+        for (int v = 0; v &lt; V; v++) {
+            if (!visited[v] && graph[u][v] && dist[u] != INT_MAX && dist[u] + graph[u][v] &lt; dist[v]) {
+                dist[v] = dist[u] + graph[u][v];
+            }
+        }
+    }
+
+    std::cout &lt;&lt; "Shortest Path from Camera 0 to all other cameras:\n";
+    for (int i = 0; i &lt; V; i++) {
+        std::cout &lt;&lt; "Camera " &lt;&lt; i &lt;&lt; ": " &lt;&lt; dist[i] &lt;&lt; std::endl;
+    }
+}
+
+void useHashTable() {
+    std::unordered_map&lt;int, std::string&gt; deviceMap;
+    deviceMap[101] = "Living Room Camera";
+    deviceMap[102] = "Front Door Sensor";
+    deviceMap[103] = "Bedroom Window Sensor";
+
+    std::cout &lt;&lt; "Device Lookup by ID:\n";
+    std::cout &lt;&lt; "Device 102: " &lt;&lt; deviceMap[102] &lt;&lt; std::endl;
+}
+
+class TrieNode {
+public:
+    TrieNode* children[26];
+    bool isEndOfWord;
+    
+    TrieNode() {
+        isEndOfWord = false;
+        for (int i = 0; i &lt; 26; i++) {
+            children[i] = nullptr;
+        }
+    }
+};
+
+void insert(TrieNode* root, const std::string& word) {
+    TrieNode* current = root;
+    for (char c : word) {
+        int index = c - 'a';
+        if (!current-&gt;children[index]) {
+            current-&gt;children[index] = new TrieNode();
+        }
+        current = current-&gt;children[index];
+    }
+    current-&gt;isEndOfWord = true;
+}
+
+bool search(TrieNode* root, const std::string& word) {
+    TrieNode* current = root;
+    for (char c : word) {
+        int index = c - 'a';
+        if (!current-&gt;children[index]) {
+            return false;
+        }
+        current = current-&gt;children[index];
+    }
+    return current-&gt;isEndOfWord;
+}
+
+void useTrie() {
+    TrieNode* root = new TrieNode();
+    insert(root, "livingroom");
+    insert(root, "frontdoor");
+
+    std::cout &lt;&lt; "Searching for 'livingroom': " &lt;&lt; (search(root, "livingroom") ? "Found" : "Not Found") &lt;&lt; std::endl;
+}
+
+class BSTNode {
+public:
+    int id;
+    BSTNode* left;
+    BSTNode* right;
+    BSTNode(int id) : id(id), left(nullptr), right(nullptr) {}
+};
+
+BSTNode* insertBST(BSTNode* root, int id) {
+    if (root == nullptr) {
+        return new BSTNode(id);
+    }
+    if (id &lt; root-&gt;id) {
+        root-&gt;left = insertBST(root-&gt;left, id);
+    } else {
+        root-&gt;right = insertBST(root-&gt;right, id);
+    }
+    return root;
+}
+
+bool searchBST(BSTNode* root, int id) {
+    if (root == nullptr) {
+        return false;
+    }
+    if (root-&gt;id == id) {
+        return true;
+    }
+    return id &lt; root-&gt;id ? searchBST(root-&gt;left, id) : searchBST(root-&gt;right, id);
+}
+
+void useBST() {
+    BSTNode* root = nullptr;
+    root = insertBST(root, 101);
+    root = insertBST(root, 102);
+    root = insertBST(root, 103);
+
+    std::cout &lt;&lt; "Searching for Sensor ID 102 in BST: " &lt;&lt; (searchBST(root, 102) ? "Found" : "Not Found") &lt;&lt; std::endl;
+}
+
+void usePrims() {
+    int graph[5][5] = {
+        {0, 2, 0, 6, 0},
+        {2, 0, 3, 8, 5},
+        {0, 3, 0, 0, 7},
+        {6, 8, 0, 0, 9},
+        {0, 5, 7, 9, 0}
+    };
+    int parent[5], key[5];
+    bool inMST[5];
+
+    for (int i = 0; i &lt; 5; i++) {
+        key[i] = INT_MAX;
+        inMST[i] = false;
+    }
+    key[0] = 0;
+    parent[0] = -1;
+
+    for (int count = 0; count &lt; 4; count++) {
+        int u = -1;
+        for (int i = 0; i &lt; 5; i++) {
+            if (!inMST[i] && (u == -1 || key[i] &lt; key[u])) {
+                u = i;
+            }
+        }
+        inMST[u] = true;
+
+        for (int v = 0; v &lt; 5; v++) {
+            if (graph[u][v] && !inMST[v] && graph[u][v] &lt; key[v]) {
+                key[v] = graph[u][v];
+                parent[v] = u;
+            }
+        }
+    }
+
+    std::cout &lt;&lt; "Minimum Spanning Tree Edges:\n";
+    for (int i = 1; i &lt; 5; i++) {
+        std::cout &lt;&lt; "Edge: " &lt;&lt; parent[i] &lt;&lt; " - " &lt;&lt; i &lt;&lt; " with weight: " &lt;&lt; graph[i][parent[i]] &lt;&lt; std::endl;
+    }
+}
+
+int main() {
+    std::cout &lt;&lt; "1. Arrays\n";
+    useArrays();
+    std::cout &lt;&lt; "\n2. Linked List\n";
+    useLinkedList();
+    std::cout &lt;&lt; "\n3. Queue\n";
+    useQueue();
+    std::cout &lt;&lt; "\n4. Dijkstra\n";
+    useDijkstra();
+    std::cout &lt;&lt; "\n5. Hash Table\n";
+    useHashTable();
+    std::cout &lt;&lt; "\n6. Trie\n";
+    useTrie();
+    std::cout &lt;&lt; "\n7. Binary Search Tree\n";
+    useBST();
+    std::cout &lt;&lt; "\n8. Prim's Algorithm\n";
+    usePrims();
+
+    return 0;
+}
+        </code>
+    </div>
+
+    <!-- C++ Result Box -->
+    <div class="result-box">
+        <code>
+1. Arrays
+Sensor Status:
+Living Room Sensor: ACTIVE
+Front Door Camera: INACTIVE
+Bedroom Sensor: ACTIVE
+Garage Sensor: INACTIVE
+
+2. Linked List
+Security Events:
+Motion detected in Living Room
+Door opened at Front Door
+
+3. Queue
+Security Task Queue:
+Living Room Camera Alert
+Front Door Camera Alert
+
+4. Dijkstra
+Shortest Path from Camera 0 to all other cameras:
+Camera 0: 0
+Camera 1: 10
+Camera 2: 60
+Camera 3: 30
+
+5. Hash Table
+Device Lookup by ID:
+Device 102: Front Door Sensor
+
+6. Trie
+Searching for 'livingroom': Found
+
+7. Binary Search Tree
+Searching for Sensor ID 102 in BST: Found
+
+8. Prim's Algorithm
+Minimum Spanning Tree Edges:
+Edge: 0 - 1 with weight: 2
+Edge: 1 - 2 with weight: 3
+Edge: 1 - 4 with weight: 5
+Edge: 0 - 3 with weight: 6
+        </code>
+    </div>
+</section>
+
+<section>
+    <h2 class="subheading">2. Urban Emergency Response System</h2>
+
+    <!-- C++ Code Box for Urban Emergency Response System -->
+    <div class="code-box">
+        <code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+#include &lt;unordered_map&gt;
+#include &lt;climits&gt;
+#include &lt;string&gt;
+
+// Dijkstra's Algorithm - Finding shortest path
+void dijkstra(int graph[5][5], int V, int src) {
+    std::vector&lt;int&gt; dist(V, INT_MAX);
+    std::vector&lt;bool&gt; visited(V, false);
+    dist[src] = 0;
+
+    for (int count = 0; count &lt; V - 1; count++) {
+        int min = INT_MAX, u = -1;
+        for (int v = 0; v &lt; V; v++) {
+            if (!visited[v] && dist[v] &lt; min) {
+                min = dist[v];
+                u = v;
+            }
+        }
+
+        visited[u] = true;
+        for (int v = 0; v &lt; V; v++) {
+            if (!visited[v] && graph[u][v] && dist[u] != INT_MAX && dist[u] + graph[u][v] &lt; dist[v]) {
+                dist[v] = dist[u] + graph[u][v];
+            }
+        }
+    }
+
+    std::cout &lt;&lt; "Shortest Path from Source (Node " &lt;&lt; src &lt;&lt; "):\n";
+    for (int i = 0; i &lt; V; i++) {
+        std::cout &lt;&lt; "Node " &lt;&lt; i &lt;&lt; ": " &lt;&lt; dist[i] &lt;&lt; " units\n";
+    }
+}
+
+// BFS Algorithm - Searching through a graph
+void bfs(int graph[5][5], int V, int start) {
+    std::vector&lt;bool&gt; visited(V, false);
+    std::queue&lt;int&gt; q;
+    visited[start] = true;
+    q.push(start);
+
+    std::cout &lt;&lt; "BFS Traversal from Node " &lt;&lt; start &lt;&lt; ":\n";
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
+        std::cout &lt;&lt; node &lt;&lt; " ";
+
+        for (int i = 0; i &lt; V; i++) {
+            if (graph[node][i] && !visited[i]) {
+                visited[i] = true;
+                q.push(i);
+            }
+        }
+    }
+    std::cout &lt;&lt; "\n";
+}
+
+// Floyd-Warshall Algorithm - Finding shortest paths between all pairs
+void floydWarshall(int graph[5][5], int V) {
+    int dist[5][5];
+    for (int i = 0; i &lt; V; i++) {
+        for (int j = 0; j &lt; V; j++) {
+            dist[i][j] = graph[i][j];
+        }
+    }
+
+    for (int k = 0; k &lt; V; k++) {
+        for (int i = 0; i &lt; V; i++) {
+            for (int j = 0; j &lt; V; j++) {
+                if (dist[i][j] &gt; dist[i][k] + dist[k][j]) {
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                }
+            }
+        }
+    }
+
+    std::cout &lt;&lt; "Shortest Path Matrix (Floyd-Warshall):\n";
+    for (int i = 0; i &lt; V; i++) {
+        for (int j = 0; j &lt; V; j++) {
+            std::cout &lt;&lt; dist[i][j] &lt;&lt; " ";
+        }
+        std::cout &lt;&lt; "\n";
+    }
+}
+
+// Queue - Task scheduling in emergency response system
+void useQueue() {
+    std::queue&lt;std::string&gt; emergencyQueue;
+    emergencyQueue.push("Fire Alarm in Zone A");
+    emergencyQueue.push("Medical Emergency in Zone B");
+    emergencyQueue.push("Traffic Accident in Zone C");
+
+    std::cout &lt;&lt; "Emergency Task Queue:\n";
+    while (!emergencyQueue.empty()) {
+        std::cout &lt;&lt; emergencyQueue.front() &lt;&lt; std::endl;
+        emergencyQueue.pop();
+    }
+}
+
+// Hashing - Storing and retrieving emergency event data
+void useHashing() {
+    std::unordered_map&lt;int, std::string&gt; emergencyMap;
+    emergencyMap[101] = "Fire in Zone A";
+    emergencyMap[102] = "Medical Emergency in Zone B";
+    emergencyMap[103] = "Traffic Accident in Zone C";
+
+    std::cout &lt;&lt; "Emergency Event Lookup (Using Hashing):\n";
+    std::cout &lt;&lt; "Event 102: " &lt;&lt; emergencyMap[102] &lt;&lt; std::endl;
+}
+
+// Linked List - Storing dynamic emergency events
+class EventNode {
+public:
+    std::string event;
+    EventNode* next;
+    EventNode(std::string event) : event(event), next(nullptr) {}
+};
+
+void useLinkedList() {
+    EventNode* head = new EventNode("Fire in Zone A");
+    head-&gt;next = new EventNode("Medical Emergency in Zone B");
+    head-&gt;next-&gt;next = new EventNode("Traffic Accident in Zone C");
+
+    std::cout &lt;&lt; "Emergency Events (Using Linked List):\n";
+    EventNode* current = head;
+    while (current != nullptr) {
+        std::cout &lt;&lt; current-&gt;event &lt;&lt; std::endl;
+        current = current-&gt;next;
+    }
+}
+
+int main() {
+    std::cout &lt;&lt; "Urban Emergency Response System\n\n";
+
+    // Dijkstra's Algorithm for finding shortest path
+    int graph[5][5] = {
+        {0, 10, 0, 30, 0},
+        {10, 0, 50, 0, 0},
+        {0, 50, 0, 0, 0},
+        {30, 0, 0, 0, 40},
+        {0, 0, 0, 40, 0}
+    };
+    dijkstra(graph, 5, 0);
+
+    // BFS Algorithm for traversing emergency zones
+    bfs(graph, 5, 0);
+
+    // Floyd-Warshall Algorithm for finding shortest paths between all zones
+    floydWarshall(graph, 5);
+
+    // Queue for managing emergency response tasks
+    useQueue();
+
+    // Hashing for quick lookup of emergency events
+    useHashing();
+
+    // Linked List for dynamically managing emergency events
+    useLinkedList();
+
+    return 0;
+}
+        </code>
+    </div>
+
+    <!-- C++ Result Box for Urban Emergency Response System -->
+    <div class="result-box">
+        <code>
+Urban Emergency Response System
+
+1. Dijkstra's Algorithm for finding shortest path
+Shortest Path from Source (Node 0):
+Node 0: 0 units
+Node 1: 10 units
+Node 2: 60 units
+Node 3: 30 units
+Node 4: 70 units
+
+2. BFS Algorithm for traversing emergency zones
+BFS Traversal from Node 0:
+0 1 2 3 4
+
+3. Floyd-Warshall Algorithm for finding shortest paths between all zones
+Shortest Path Matrix (Floyd-Warshall):
+0 10 60 30 70 
+10 0 50 30 40 
+60 50 0 80 90 
+30 30 80 0 40 
+70 40 90 40 0 
+
+4. Emergency Task Queue:
+Fire Alarm in Zone A
+Medical Emergency in Zone B
+Traffic Accident in Zone C
+
+5. Emergency Event Lookup (Using Hashing):
+Event 102: Medical Emergency in Zone B
+
+6. Emergency Events (Using Linked List):
+Fire in Zone A
+Medical Emergency in Zone B
+Traffic Accident in Zone C
+        </code>
+    </div>
+</section>
+
+
+<footer>
+    <p>Created by <a href="#">Your Name</a> | &copy; 2024</p>
+</footer>
+
+</body>
+</html>
